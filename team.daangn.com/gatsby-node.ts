@@ -63,6 +63,12 @@ export const createPages: GatsbyNode['createPages'] = async ({
           uid
         }
       }
+
+      allPrismicAboutPrPost {
+        nodes {
+          uid
+        }
+      }
     }
   `);
 
@@ -72,7 +78,7 @@ export const createPages: GatsbyNode['createPages'] = async ({
   if (!data) {
     throw new Error('Failed to fetch data for team.daangn.com');
   }
-  
+
   for (const ir of data.allPrismicIr.nodes) {
     if (!ir.uid) {
       reporter.warn('Some ir in Prismic CMS have empty uid');
@@ -106,4 +112,14 @@ export const createPages: GatsbyNode['createPages'] = async ({
     isPermanent: false,
     redirectInBrowser: true,
   });
+
+  for (const prPost of data.allPrismicAboutPrPost.nodes) {
+    actions.createPage({
+      path: `/pr/archive/${prPost.uid}/`,
+      component: path.resolve(basePath, 'src/templates/PrPostPage.tsx'),
+      context: {
+        uid: prPost.uid,
+      },
+    });
+  }
 };
