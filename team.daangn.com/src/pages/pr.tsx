@@ -1,12 +1,9 @@
 import * as React from 'react';
-import { rem } from 'polished';
 import {
   graphql,
-  Link,
   type PageProps,
 } from 'gatsby';
 import { styled } from 'gatsby-theme-stitches/src/config';
-import { vars } from '@seed-design/design-token';
 import PrCard from '../components/pr/PrCard';
 
 type PrPageProps = PageProps<GatsbyTypes.PrPageQuery>;
@@ -24,11 +21,10 @@ export const query = graphql`
 `;
 
 const PrPage: React.FC<PrPageProps> = ({ data }) => {
-  console.log("data ::", data);
   return (
     <Container>
       {data.allPrismicAboutPrPost.nodes.map(node => (
-        <PrCard key={node.uid} data={node.data} />
+        <PrCard key={node.uid} data={node} />
       ))}
     </Container>
   );
