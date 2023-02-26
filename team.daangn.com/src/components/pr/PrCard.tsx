@@ -37,11 +37,11 @@ export const query = graphql`
 
 const PostCard: React.FC<PrCardProps> = ({ data }) => {
   return (
-      <Container>
+      <Container to={`/pr/archive/${data.uid}`}>
         <ThumbnailImage
           alt={"이미지"}
           // image={data?.thumnail_image?.localFile?.childImageSharp?.gatsbyImageData}
-          image={data.thumbnail_image.localFile.childrenImageSharp[0].gatsbyImageData}
+          image={data.data.thumbnail_image.localFile.childrenImageSharp[0].gatsbyImageData}
           css={{
             width: rem(250),
             height: rem(140),
@@ -57,20 +57,21 @@ const PostCard: React.FC<PrCardProps> = ({ data }) => {
           // }}
         />
         <DescriptionWrapper>
-          <Title>{data.title.text}</Title>
-          <Summary>{data.summary}</Summary>
-          <PublishDate>{data.published_at.replaceAll("-", ".")}</PublishDate>
+          <Title>{data.data.title.text}</Title>
+          <Summary>{data.data.summary}</Summary>
+          <PublishDate>{data.data.published_at.replaceAll("-", ".")}</PublishDate>
         </DescriptionWrapper>
       </Container>
   );
 };
 
-const Container = styled('div', {
+const Container = styled(Link, {
   display: 'grid',
   gridTemplateColumns: '0.5fr 1fr',
   width: '100%',
   maxHeight: rem(100),
   marginBottom: rem(100),
+  textDecoration: "none",
 });
 
 const ThumbnailImage = styled(GatsbyImage, {});
@@ -81,7 +82,7 @@ const DescriptionWrapper = styled('div', {
 
 const Title = styled('h3', {
   fontSize: "$subtitle4",
-
+  color: vars.$scale.color.gray900,
   // "@media (min-width: 1096px)" : {
   //   fontSize: "$subtitle3",
   // }
