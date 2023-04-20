@@ -62,7 +62,7 @@ const Container = styled('section', {
   width: '100%',
   marginBottom: rem(10),
   fontSize: '$body2',
-  lineHeight: rem(24),
+  lineHeight: rem(28),
   letterSpacing: rem(0.1),
   color: vars.$scale.color.gray700,
 
@@ -92,9 +92,9 @@ const Description = styled('p', {
   width: '100%',
   marginBottom: rem(12),
   lineHeight: rem(24),
+  letterSpacing: rem(0.4),
   fontSize: '$body2',
   color: vars.$scale.color.gray700,
-  letterSpacing: rem(0.1),
   wordBreak: 'break-all',
 
   '@sm': {
@@ -105,19 +105,27 @@ const Description = styled('p', {
 });
 
 const UList = styled('ul', {
-  lineHeight: rem(30),
   margin: 0,
   marginBottom: rem(12),
-  paddingInlineStart: rem(42),
+  paddingInlineStart: rem(32),
   color: vars.$scale.color.gray700,
+
+  '@sm': {
+    lineHeight: rem(30),
+    paddingInlineStart: rem(42),
+  },
 });
 
 const OList = styled('ol', {
   margin: 0,
   marginBottom: rem(12),
-  lineHeight: rem(30),
-  paddingInlineStart: rem(42),
+  paddingInlineStart: rem(32),
   color: vars.$scale.color.gray700,
+
+  '@sm': {
+    paddingInlineStart: rem(42),
+    lineHeight: rem(30),
+  },
 });
 
 const Image = styled('img', {
