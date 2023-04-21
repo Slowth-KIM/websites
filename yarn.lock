@@ -1584,21 +1584,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cometjs/core@npm:2.2.0":
-  version: 2.2.0
-  resolution: "@cometjs/core@npm:2.2.0"
-  dependencies:
-    tsconfck: ^2.0.1
-  peerDependencies:
-    typescript: ^4.5.0
-  peerDependenciesMeta:
-    typescript:
-      optional: true
-  checksum: 9ee3a6b36c08de7672766429dd28bc408a3e334223809f143932e955153b08f0bb96b8e21463021e82add7e262746ab476483609dd8cf2ce714def5b240da5b4
-  languageName: node
-  linkType: hard
-
-"@cometjs/core@npm:^2.2.0":
+"@cometjs/core@npm:2.3.1, @cometjs/core@npm:^2.2.0":
   version: 2.3.1
   resolution: "@cometjs/core@npm:2.3.1"
   dependencies:
@@ -2659,7 +2645,7 @@ __metadata:
   dependencies:
     "@babel/cli": 7.21.0
     "@babel/core": 7.21.4
-    "@cometjs/core": 2.2.0
+    "@cometjs/core": 2.3.1
     "@cometjs/graphql-utils": 2.0.5
     "@karrotmarket/gatsby-theme-prismic": "workspace:^"
     "@karrotmarket/gatsby-theme-website": "workspace:^"
@@ -2754,7 +2740,7 @@ __metadata:
   dependencies:
     "@babel/cli": 7.21.0
     "@babel/core": 7.21.4
-    "@cometjs/core": 2.2.0
+    "@cometjs/core": 2.3.1
     "@cometjs/graphql-utils": 2.0.5
     "@karrotmarket/gatsby-theme-prismic": "workspace:^"
     "@karrotmarket/gatsby-theme-seed-design": "workspace:^"
@@ -2798,7 +2784,7 @@ __metadata:
   dependencies:
     "@babel/cli": 7.21.0
     "@babel/core": 7.21.4
-    "@cometjs/core": 2.2.0
+    "@cometjs/core": 2.3.1
     "@cometjs/graphql-utils": 2.0.5
     "@cometjs/react-utils": 2.1.2
     "@karrotmarket/gatsby-source-greenhouse-jobboard": 0.9.0
@@ -2863,7 +2849,7 @@ __metadata:
   dependencies:
     "@babel/cli": 7.21.0
     "@babel/core": 7.21.4
-    "@cometjs/core": 2.2.0
+    "@cometjs/core": 2.3.1
     "@cometjs/react-utils": 2.1.2
     "@karrotmarket/gatsby-theme-seed-design": "workspace:^"
     "@seed-design/design-token": 1.0.1
